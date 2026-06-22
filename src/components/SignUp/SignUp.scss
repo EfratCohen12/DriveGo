@@ -1,0 +1,60 @@
+@use '../SignIn/SignIn.scss';
+
+.SignUp {
+  @extend .SignIn;
+
+  .wide-container {
+    max-width: 550px;
+  }
+
+  .form-row {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+
+    .form-group {
+      flex: 1;
+    }
+  }
+
+  .admin-checkbox-group {
+    margin: 20px 0;
+
+    .checkbox-label {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+
+      input[type="checkbox"] {
+        accent-color: #d4af37;
+        width: 18px;
+        height: 18px;
+        cursor: pointer;
+      }
+
+      span {
+        color: #ffffff;
+        font-size: 0.95rem;
+      }
+    }
+  }
+
+  .admin-field {
+    animation: fadeInForm 0.3s ease-out;
+
+    .admin-input {
+      border-color: rgba(212, 175, 55, 0.4);
+      background: rgba(212, 175, 55, 0.03);
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .SignUp {
+    .form-row {
+      flex-direction: column;
+      gap: 0;
+    }
+  }
+}

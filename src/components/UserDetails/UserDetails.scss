@@ -1,0 +1,5 @@
+@use '../SignUp/SignUp.scss';
+  
+.UserDetails {
+    @extend .SignUp;
+}
